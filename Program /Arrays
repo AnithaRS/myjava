@@ -1,0 +1,23 @@
+package Easy;
+
+import java.util.Arrays;
+
+public class BuildArrayFromPermudation1920 {
+
+	public static void main(String[] args) {
+		int a[]= {0,2,1,5,3,4};//0,1,2,4,5,3
+           int[] arr= val(a);
+		System.out.println(Arrays.toString(arr));
+
+	}
+	public static int[] val(int[] a) {
+		int arr[]=new int[a.length];
+for(int i=0;i<a.length;i++) {
+	arr[i]=a[a[i]];
+	
+}return arr;
+
+	}
+	}
+
+
