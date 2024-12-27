@@ -1,0 +1,27 @@
+package Basic;
+
+import java.util.Scanner;
+
+public class Prime1 {
+
+	public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the num:");
+		int num=sc.nextInt();
+		if(isprime(num)) {
+			System.out.println("not prime");
+		}else {
+			System.out.println(" prime");
+		}
+		}
+	public static boolean isprime(int num) {
+		int c=2;
+		while(num>c) {
+			if(num%c==0) {
+				return true;
+			}c++;
+		}
+		return false;
+	}
+	}
+
