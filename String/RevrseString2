@@ -1,0 +1,21 @@
+package Basic;
+
+public class RevrseString2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str="anitha";
+		String val=method(str);
+		System.out.println(val);
+	}
+	public static String method(String str) {
+		
+		 StringBuilder sb=new StringBuilder();
+		 for(int i=str.length()-1;i>=0;i--) {
+	           sb.append(str.charAt(i));
+		 }
+		 return sb.toString();
+	}
+
+}
