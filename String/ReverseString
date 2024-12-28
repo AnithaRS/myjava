@@ -1,0 +1,28 @@
+package Basic;
+
+import java.util.Scanner;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the word:");
+		String  word=sc.next();
+		//stringReverse(word);
+		System.out.println(stringReverse(word));
+	}
+	public static String stringReverse(String word) {
+		char str[] = new char[word.length()];
+	int j=0;
+		char c[]=word.toCharArray();
+		for(int i=c.length-1;i>=0;i--,j++) {
+			str[j]=c[i];
+	
+		}
+		return new String(str);
+		
+	}
+
+}
