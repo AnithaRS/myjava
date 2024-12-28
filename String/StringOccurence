@@ -1,0 +1,36 @@
+package Basic;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class StringOccurence {
+
+	public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter The Word:");
+String word=sc.nextLine();
+findStringOccurence(word);
+
+	}
+
+	private static void findStringOccurence(String word) {
+char[] c=word.toCharArray();	
+Map<Character,Integer> m=new HashMap<>();
+for(char x:c) {
+	
+	if(m.containsKey(x)) {
+		int value=m.get(x);
+		m.put(x, value+1);
+	}else {
+m.put(x, 1);
+}
+}
+
+System.out.println(m);
+
+
+
+
+	}
+
+}
