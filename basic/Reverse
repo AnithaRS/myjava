@@ -1,0 +1,24 @@
+package Basic;
+
+import java.util.Scanner;
+
+public class Reverse {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the num:");
+		int num=sc.nextInt();
+		int val=reverse(num);
+		System.out.print(val);
+	}
+	public static int reverse(int num) {
+		int n=num,val=0;
+		while(n>0) {
+			int mod=n%10;
+		    val=(val*10)+mod;
+		    n=n/10;
+		}
+    return val;		
+	}
+
+}
