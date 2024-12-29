@@ -1,0 +1,29 @@
+package Basic;
+
+import java.util.Scanner;
+
+public class CountEvenOdd {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("num:");
+		int n=sc.nextInt();
+		method(n);
+	}
+	public static void method(int n) {
+		int even=0,odd=0;
+		while(n>0) {
+			int mod=n%10;
+		if(mod%2==0) {
+			even++;
+		}
+		else {
+			odd++;
+		}n=n/10;
+		}
+		System.out.println("Even="+even);
+		System.out.print("Odd="+odd);
+	}
+	
+	
+}
