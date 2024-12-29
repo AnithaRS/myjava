@@ -1,0 +1,19 @@
+package Basic;
+
+import java.util.Arrays;
+
+public class TwoArrayEqual {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] a1= {12,34,56,78};
+		int[] a2= {12,34,56,78};
+		if(Arrays.equals(a1,a2)) {
+			System.out.println("True");
+		}else {
+			System.out.println("not");
+		}
+	}
+
+}
