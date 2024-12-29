@@ -1,0 +1,32 @@
+package Basic;
+
+import java.util.Scanner;
+
+public class AmstrongNum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the num:");
+int n=sc.nextInt();
+if(method(n)) {
+	System.out.println("Amstrong");
+}else {
+	System.out.println("Not ");
+}
+	}
+
+	public static boolean method(int n) {
+		int mul=0,in=n;
+		while(in>0) {
+			int mod=in%10;
+			mul=mul+(mod*mod*mod);
+			in=in/10;
+		}
+		if(n==mul) {
+			return true;
+		}
+		
+		return false;
+	}
+}
