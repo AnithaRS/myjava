@@ -1,0 +1,19 @@
+package Basic;
+
+public class FindSequenceOfcharacter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str1="Hello world";
+		String str2="world";
+		
+		if(str1.contains(str2)) {
+			System.out.println("Sequence found");
+		}else {
+			System.out.println("Sequence not found");
+		}
+		
+	}
+
+}
