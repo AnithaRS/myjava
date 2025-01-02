@@ -1,0 +1,17 @@
+package Basic;
+
+import java.util.ArrayList;
+
+public class AddAndRemoveElementArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<String> val=new ArrayList<String>();
+		val.add("anitha");
+		val.remove("madhaven");
+	      System.out.println(val);
+		
+	}
+
+}
