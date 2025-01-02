@@ -10,7 +10,11 @@ public class UniqueValues {
 		// TODO Auto-generated method stub
 
 		String[] array = {"apple", "banana", "apple", "orange", "banana"};
-        Set<String> uniqueValues = new HashSet<>(Arrays.asList(array));
+        Set<String> uniqueValues = new HashSet<>();
+        for(String val:array) {
+        	uniqueValues.add(val);
+        }
+        
         System.out.println(uniqueValues);
 	}
 
