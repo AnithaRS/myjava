@@ -5,8 +5,9 @@ public class LeanerSearchString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String str="anitha";
+		String val="anitha";
 		char target='a';
+               String str=val.toLowerCase();
 		System.out.println(search(str,target));
 		
 	}
