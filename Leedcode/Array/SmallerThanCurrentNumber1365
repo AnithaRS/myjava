@@ -1,0 +1,30 @@
+package Easy;
+
+import java.util.Arrays;
+
+public class SmallerThanCurrentNumber1365 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       int nums[]= {8,1,2,2,3};//4,0,1,1,3
+       int[] arr=val( nums);
+       System.out.println(Arrays.toString(arr));
+       }
+		
+	public static int[] val(int[] nums) {
+		 int new_arr[]=new int[nums.length];
+		for(int i=0;i<nums.length;i++) {
+			int count=0;
+			for(int j=0;j<nums.length;j++) {
+				if(nums[i]>nums[j]) {
+					count++;
+				}
+
+			}
+			 new_arr[i]=count;
+		}
+		return  new_arr;
+		
+	}
+
+}
