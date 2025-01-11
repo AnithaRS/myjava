@@ -1,0 +1,27 @@
+package Partten;
+
+public class partten10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		partten(4);
+	}
+	public static void partten(int n) {
+		for(int r=1;r<=n;r++) {
+			int sp=n-r;
+			for(int s=1;s<=sp;s++) {
+				System.out.print(" ");
+			}for(int c=1;c<=r;c++) {
+				System.out.print("* ");
+			}System.out.println();
+		}
+	}
+
+}
+//
+
+   * 
+  * * 
+ * * * 
+* * * * 
