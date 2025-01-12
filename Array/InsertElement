@@ -1,0 +1,30 @@
+package Array;
+
+import java.util.Arrays;
+
+public class InsertElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a[]= {34,78,56,90,45};
+		int element=99;
+		int index=3;
+		int ans[]=method(a,element,index);
+		System.out.println(Arrays.toString(ans));
+	}
+
+	public static int[] method(int a[],int element,int index) {
+		int n_a[]=new int[a.length+1];
+		int j=0;
+		for(int i=0;i<a.length+1;i++) {
+			if(i==index) {
+				n_a[i]=element;
+			}
+			else {
+				n_a[i]=a[j++];
+			}
+		}
+	return n_a;
+	}
+}
