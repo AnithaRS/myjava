@@ -1,0 +1,25 @@
+package Array;
+
+public class ContainSpecificValue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int arr[]= {67,89,56,4};
+		int target=6;
+		if(isContain(arr,target)) {
+			System.out.println("true");
+		}else {
+			System.out.println("False");
+		}
+	}
+	public static boolean isContain(int[] arr,int target) {
+		
+		for(int i=0;i<arr.length;i++) {
+	    if(arr[i]==target) {		
+	    	return true;
+	    }
+		}return false;
+	}
+
+}
