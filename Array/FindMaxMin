@@ -1,0 +1,29 @@
+package Array;
+
+public class FindMaxMin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a[]= {54,3,9,45,95,89,12};
+		max_min(a);
+	}
+
+	public static void max_min(int a[]) {
+	     int max=Integer.MIN_VALUE;
+	     for(int i=0;i<a.length;i++) {
+	    	 if(max<a[i]) {
+	    		 max=a[i];
+	    	 }
+	     }System.out.println("max valiue:"+max);
+	     
+	     int min=Integer.MAX_VALUE;
+	     for(int j=0;j<a.length;j++) {
+	    	 if(min>a[j]) {
+	    		 min=a[j];
+	    	 }
+	     }System.out.println("min value:"+min);
+	}
+	
+
+}
