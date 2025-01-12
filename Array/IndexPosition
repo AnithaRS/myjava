@@ -1,0 +1,21 @@
+package Array;
+
+public class IndexPosition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a[]= {67,5,90,45,23};
+		int index=45;
+		int ans=method(a,index);
+		System.out.println(ans);
+	}
+	public static int method(int[] a,int index) {
+		for(int i=0;i<a.length;i++) {
+			if(a[i]==index) {
+				return i;
+			}
+		}return 0;
+	}
+
+}
