@@ -1,0 +1,25 @@
+package Array;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListToArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<String> list=new ArrayList<>();
+		list.add("anitha");
+		list.add("banu");
+		list.add("ciuba");
+		list.add("dhana");
+		//System.out.println(list);
+		String[] my_arry=new String[list.size()];
+		list.toArray(my_arry);
+		for(String ans:my_arry) {
+			System.out.println(ans);
+		}
+		
+	}
+
+}
