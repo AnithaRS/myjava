@@ -1,0 +1,36 @@
+package Array;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CommonBetweenTwoArrayInteger {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] a1= {23,78,45,34};
+		int[] a2= {7,78,89,45,9};
+		int[] res=method(a1,a2);
+		System.out.println(Arrays.toString(res));
+		}
+
+	public static  int[] method(int[] a1,int[] a2) {
+		List<Integer> common=new ArrayList<>();
+		for(int i=0;i<a1.length;i++) {
+			for(int j=0;j<a2.length;j++) {
+				if(a1[i]==a2[j]) {
+				common.add(a1[i]);
+				}
+			}
+		}
+		int[] ans=new int[common.size()];
+		for(int i=0;i<common.size();i++) {
+			ans[i]=common.get(i);
+			}
+		
+		return ans;
+	}
+	}
+
+
