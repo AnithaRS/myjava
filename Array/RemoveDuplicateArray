@@ -1,0 +1,30 @@
+package Array;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.TreeSet;
+
+public class RemoveDuplicateArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] a1= {23,67,56,4,87,23,56};
+		int k[]=method(a1);
+		System.out.println(Arrays.toString(k));
+	}
+
+	public static int[] method(int[] a1) {
+		HashSet<Integer> dup=new HashSet<Integer>();
+		for(int i=0;i<a1.length;i++) {
+			dup.add(a1[i]);
+		}
+		int ans[]=new int[dup.size()];
+		int i=0;
+		for(int val:dup) {
+			ans[i++]=val;
+		}
+		
+		return ans;
+	}
+}
