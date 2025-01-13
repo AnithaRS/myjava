@@ -1,0 +1,26 @@
+package Array;
+
+import java.util.Arrays;
+
+public class SecondSmallestArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a[]= {56,90,45,65,98,3};
+		int ans=method(a);
+		System.out.println(ans);
+	}
+
+	public static int method(int a[]) {
+		for(int i=0;i<2;i++) {
+			for(int j=1;j<a.length-i;j++) {
+				if(a[j]>a[j-1]) {
+					int temp=a[j-1];
+					a[j-1]=a[j];
+					a[j]=temp;
+				}
+			}
+		}return a[a.length-2];
+	}
+}
