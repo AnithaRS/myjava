@@ -1,0 +1,25 @@
+package Array;
+
+import java.util.Arrays;
+
+public class DuplicatElementString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String val[]= {"ani","banu","cuba","ani","dhana","cuba"};
+	      method(val);
+		
+	}
+	public static void method(String[] val) {
+		for(int i=0;i<val.length;i++) {
+			for(int j=i+1;j<val.length;j++) {
+				if(val[i].equals(val[j]) && (i!=j)) {
+					System.out.println(val[i]);
+					
+				}
+			}
+		}
+	}
+
+}
