@@ -1,6 +1,8 @@
 package Array;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CommonBetweenTwoArray {
 
@@ -9,18 +11,26 @@ public class CommonBetweenTwoArray {
 
 		String[] a1= {"anitha","banu","cuba","dhana"};
 		String[] a2= {"anitha","balu","chinna","dhana"};
-	       method(a1,a2);
-		
+	      String[] val= method(a1,a2);
+		System.out.println(Arrays.toString(val));
 		}
-	public static void method(String[] a1,String[] a2) {
+	public static String[] method(String[] a1,String[] a2) {
 		//int k=0;
+		List<String> common=new ArrayList<>();
 		for(int i=0;i<a1.length;i++) {
 			for(int j=0;j<a1.length;j++) {
 				if(a1[i].equals(a2[j])) {
-				System.out.println(a2[j]);
+			//	System.out.println(a2[j]);
+                   common.add(a1[i]);
+				
 				}
 			}
-		}//return new String[val];
+		}
+		String[] ans=new String[common.size()];
+		for(int i=0;i<common.size();i++) {
+			ans[i]=common.get(i);
+		}
+	return ans;
+		
 	}
-
 }
