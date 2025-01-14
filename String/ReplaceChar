@@ -1,0 +1,17 @@
+package String;
+
+public class ReplaceChar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str="Anitha";
+		String ans=method(str.toLowerCase());
+		System.out.println(ans);
+	}
+
+	public static String method(String str) {
+		String replace=str.replace('a', 'v');
+		return replace;
+	}
+}
