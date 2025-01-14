@@ -1,0 +1,25 @@
+package String;
+
+public class GetCharacterGivenIndex {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String a= "java Excersies";
+		char ch='e';
+		int ans=method(a,ch);
+	System.out.println(ans);
+	
+	}
+
+	public static int method(String a,char ch) {
+             String val=a.toLowerCase();
+		for(int i=0;i<a.length();i++) {
+			if(val.charAt(i)==ch) {
+				return i;
+			}
+		}return 0;
+	}
+	
+
+}
