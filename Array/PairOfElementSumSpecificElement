@@ -1,0 +1,28 @@
+package Array;
+
+public class PairOfElementSumSpecificElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a[]= {2,7,4,-5,11,5,20};
+		int spc=15;
+		method(a,spc);
+		//System.out.println(ans);
+				
+	}
+	public static void method(int[] a,int spc) {
+		for(int i=0;i<a.length;i++) {
+			for(int j=i+1;j<a.length;j++) {
+				if(a[i]+a[j]==spc) {
+			         System.out.println(a[i]+","+a[j]);
+				}
+			}
+		}
+	}
+//4,11
+-5,20
+
+     
+	
+}
