@@ -1,0 +1,13 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+           List<String> a=new  ArrayList<>();
+            a.add("apple");
+            a.add("orange");
+            a.add("bananaa");
+            //Collections.reverse(a);
+          List<String> sub=a.subList(0,2);
+            System.out.println(sub);
+    }
+}
+ subString    [apple, orange]
