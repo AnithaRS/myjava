@@ -1,0 +1,25 @@
+import java.util.*;
+//import java.util.Collections;
+
+class Main {
+    public static void main(String[] args) {
+        List<String> l=new ArrayList<>();
+        l.add("a");
+         l.add("b");
+          l.add("c");
+           l.add("d");
+              List<String> n=new ArrayList<>();
+                 n.add("e");
+                n.add("f");
+              n.add("g");
+              n.add("h");
+              
+                      List<String> a=new ArrayList<>();
+                      a.addAll(l);
+                      a.addAll(n);
+                      System.out.println(a);
+
+           
+    }
+}
+[a, b, c, d, e, f, g, h]
