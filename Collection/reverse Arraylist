@@ -1,0 +1,12 @@
+mport java.util.*;
+class Main {
+    public static void main(String[] args) {
+           List<String> a=new  ArrayList<>();
+            a.add("apple");
+            a.add("orange");
+            a.add("bananaa");
+            Collections.reverse(a);
+            System.out.println(a);
+
+    }
+}      
