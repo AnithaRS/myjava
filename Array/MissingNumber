@@ -1,0 +1,23 @@
+package Basic;
+
+public class MissingNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a[]= {1,2,3,4,6};
+		int val=method(a);
+		System.out.println(val);
+	}
+	public static int method(int a[]) {
+		int sum=0;
+		for(int i=1;i<=6;i++) {
+			sum=sum+i;
+		}
+		for(int j=0;j<a.length;j++) {
+			sum=sum-a[j];
+		}
+		return sum;
+	}
+
+}
