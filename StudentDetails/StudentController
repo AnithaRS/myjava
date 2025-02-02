@@ -1,0 +1,52 @@
+package com.practice.controller;
+
+import java.util.Scanner;
+
+import com.practice.services.StudentServices;
+import com.practice.services.StudentServicesImpl;
+
+public class StudentController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Welcome to SMS!!!!!!......");
+		StudentServices obj=new StudentServicesImpl();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Please choose this menu:");
+		boolean click=true;
+		while(click) {
+			System.out.println("1.creatStudent");
+			System.out.println("2.ListStudent");
+			System.out.println("3.findName");
+			System.out.println("4.deleteStudent");
+			System.out.println("5.updatStudent");
+			int option=sc.nextInt();
+			switch(option) {
+			case 1:
+				obj.creatStudent();
+				break;
+			case 2:
+				obj.ListStudent();
+				break;
+			case 3:
+				obj.findName();
+				break;
+			case 4:
+				obj.deleteStudent();
+				break;
+			case 5:
+				obj.updatStudent();
+				break;
+			case 6:
+				System.out.println("ThankYou For Using Student Management System..!");
+				click = false;
+				break;
+			default:
+				System.out.println("\nInvalid Choice.");
+			}
+			
+		}
+	}
+
+}
