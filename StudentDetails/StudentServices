@@ -1,0 +1,9 @@
+package com.practice.services;
+
+public interface StudentServices {
+	public void creatStudent();
+	public void  ListStudent();
+	public void findName();
+	public void deleteStudent();
+	public void updatStudent();
+}
