@@ -1,0 +1,34 @@
+package com.practice.Bo;
+
+public class StudentBo {
+
+	private int id;
+	private String name;
+	private long rollno;
+	private long phn;
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int studentid) {
+		this.id=studentid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String studentName) {
+	   name=studentName;
+	}
+	public long getRollName() {
+		return rollno;
+	}
+	public void setRollno(long rollno) {
+		this.rollno=rollno;
+	}
+	public long getPhn() {
+		return phn;
+	}public void setPhn(long phn) {
+		this.phn=phn;
+	}
+}
