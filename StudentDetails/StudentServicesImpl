@@ -1,0 +1,243 @@
+package com.practice.services;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+import com.practice.Bo.StudentBo;
+
+public class StudentServicesImpl implements StudentServices{
+
+	ArrayList<StudentBo> list=new ArrayList<>();
+	Scanner sc = new Scanner(System.in);
+
+	
+	
+	
+	@Override
+	public void creatStudent() {
+		// TODO Auto-generated method stub
+		StudentBo studentObj = new StudentBo();
+		System.out.println("Welcome to create student....");
+		int id=0;
+		boolean idStatus=true;
+		System.out.print("Enter your id:");
+		try{
+	while(idStatus) {
+		id=sc.nextInt();
+		if(0<id) {
+			studentObj.setId(id);
+			idStatus=false;
+		}else {
+			System.out.println("Please enter vaild id....");
+		}
+		
+	}
+	
+		}catch(Exception e) {
+	System.out.println("Exception occure...");
+	}
+		
+		
+		
+		
+		String name=null;
+		boolean nameStatus=true;
+		System.out.print("Enter your name:");
+		sc.nextLine();
+		try {
+			while(nameStatus) {
+				name=sc.nextLine();
+				if(!name.isEmpty()) {
+					studentObj.setName(name);
+					nameStatus=false;
+				}else {
+					System.out.println("please enter valid name...");
+				}
+			}
+		}catch(Exception e) {
+			System.out.println("Exception occure");
+		}
+		
+		
+		
+		
+		long rollno=0;
+		boolean rollStatus=true;
+		System.out.print("Enter your rollno:");
+		try {
+			while(rollStatus) {
+				rollno=sc.nextLong();
+				if(rollno>0) {
+					studentObj.setRollno(rollno);
+					rollStatus=false;
+				}else {
+					System.out.println("Please enter valid rollno...");
+				}
+			}
+		}catch(Exception a) {
+			System.out.println("Exception occure");
+		}
+		
+		
+		long phn=0;
+		boolean phnStatus=true;
+		System.out.print("Enter your number:");
+		try {
+			while(phnStatus) {
+				phn=sc.nextLong();
+				if(phn>0) {
+					studentObj.setPhn(phn);
+					phnStatus=false;
+				}else {
+					System.out.println("Enter valid phn number...");
+				}
+			}
+		}catch(Exception e) {
+			System.out.println("Exception occure");
+		}list.add(studentObj);
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	@Override
+	public void ListStudent() {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to list");
+		if(list!=null && 0<list.size()) {
+	for(StudentBo s:list) {		
+		System.out.println("Your Id:"+s.getId());
+		System.out.println("Your name:"+s.getName());
+		System.out.println("Your Rollno:"+s.getRollName());
+		System.out.println("Your number:"+s.getPhn());
+	}
+		}
+		
+	}
+	
+	
+	
+
+	@Override
+	public void findName() {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to find name!!!");
+		System.out.print("Enter the Student name:");
+		sc.nextLine();
+		String name=sc.nextLine();
+		if(0<list.size() && null!=list) {
+			for(StudentBo n:list) {
+				if(name.equals(n.getName())) {
+					System.out.println("Student Details....");
+					System.out.println("Name:"+n.getName());
+					System.out.println("id:"+n.getId());
+					System.out.println("number:"+n.getPhn());
+					System.out.println("rollno:"+n.getRollName());
+				}
+			}
+		}
+	
+	
+	}
+
+	@Override
+	public void deleteStudent() {
+		// TODO Auto-generated method stub
+		System.out.println("Welcoeme to Delete  student ");
+		System.out.println("Enter the Student ID");
+		int id=sc.nextInt();
+		Iterator<StudentBo> removeObj = list.iterator();
+		while (removeObj.hasNext()) {
+			StudentBo ref = removeObj.next();
+			if(id==ref.getId()) {
+				removeObj.remove();
+			}
+		}
+		
+		
+	}
+
+	@Override
+	public void updatStudent() {
+		// TODO Auto-generated method stub
+		StudentBo studentObj = new StudentBo();
+		System.out.println("Enter the sudentId:");
+       int id=sc.nextInt();
+       for(StudentBo ref:list) {
+    	   if(id==ref.getId()) {
+    		   sc.nextLine();
+    		   
+    		   
+    		   
+    		   String name=null;
+    		   boolean nameStatus=true;
+    		   try {
+    			   while(nameStatus) {
+    				   System.out.print("Enter name:");
+    				   name=sc.nextLine();
+    				   if(name!=null) {
+    					   studentObj.setName(name);
+    					   nameStatus=false;
+    				   }else {
+    					   System.out.println("Enter valid name");
+    				   }
+    			   }
+    		   }catch(Exception e) {
+    			   System.out.println("Exception occure");
+    		   }
+    		   
+    		   long rollno=0;
+    		   boolean noStatus=true;
+    		   try {
+    			   while(noStatus) {
+    				   System.out.print("Enter rollno:");
+    				   rollno=sc.nextLong();
+    				   if(rollno>0) {
+    					  studentObj.setRollno(rollno);
+    					  noStatus=false;;
+    				   }else {
+    					   System.out.println("Enter valid rollno");
+    				   }
+    			   }
+    		   }catch(Exception e) {
+    			   System.out.println("Error occure");
+    		   }
+    		   
+    				   
+    		   long phn=0;
+    		   boolean phnStatus=true;
+    		   try {
+    			   while(phnStatus) {
+    				   System.out.print("Enter number:");
+    				   phn=sc.nextLong();
+    				   if(phn>0) {
+    					   studentObj.setPhn(phn);
+    					   phnStatus=false;
+    					   
+    				   }else {
+    					   System.out.println("Enter valid number");
+    				   }
+    			   }
+    		   }catch(Exception e) {
+    			   System.out.println("Erroe valid");
+    		   }
+    	   }
+    		   if (null != studentObj) {
+   				int indexNum;
+   				studentObj.setId(id);
+   				indexNum = id - 1;
+   				list.set(indexNum, studentObj);
+   			}
+    		   
+    		   
+    		   
+    	   }
+       }
+	}
+
+
