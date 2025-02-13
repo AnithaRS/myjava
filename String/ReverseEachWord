@@ -1,0 +1,19 @@
+package baic;
+
+public class ReverseEachWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str="anitha jesii";
+		String[] split=str.split(" ");
+		for(int i=0;i<split.length;i++) {
+			StringBuilder sb=new StringBuilder();
+			for(int j=split[i].length()-1;j>=0;j--) {
+				
+				sb.append(split[i].charAt(j));
+			}System.out.println(sb.toString());
+		}
+	}
+
+}
