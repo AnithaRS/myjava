@@ -1,0 +1,21 @@
+package conversion;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class MapToList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Map<Integer,String> map=new HashMap<>();
+		map.put(1, "ani");
+		map.put(2, "banu");
+		
+		List<Map.Entry<Integer,String>> mapTolist=new ArrayList<>(map.entrySet());
+		System.out.println(mapTolist);
+	}
+
+}
