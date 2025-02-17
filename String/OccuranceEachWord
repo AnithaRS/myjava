@@ -1,0 +1,25 @@
+package baic;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class OccuranceEachWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str="anitha is a good anitha a girl";
+		String[] spl=str.split(" ");
+		Map<String,Integer> m=new HashMap<>();
+		for(String c:spl) {
+			if(m.containsKey(c)) {
+				int x=m.get(c);
+				m.put(c,x+1);
+			}else {
+				m.put(c,1);
+			}
+		}System.out.println(m);
+		
+	}
+
+}
