@@ -14,7 +14,7 @@ public class ListToArray {
 		l.add("bvanu");
 		l.add("cuba");
 		
-		String[] array=l.toArray(new String[1]);
+		String[] array=l.toArray(new String[0]);
 		System.out.println(Arrays.toString(array));
 		
 	}
