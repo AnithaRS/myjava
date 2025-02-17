@@ -1,0 +1,22 @@
+package conversion;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class ListToArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<String> l=new ArrayList<>();
+		l.add("ani");
+		l.add("bvanu");
+		l.add("cuba");
+		
+		String[] array=l.toArray(new String[1]);
+		System.out.println(Arrays.toString(array));
+		
+	}
+
+}
