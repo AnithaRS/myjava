@@ -1,0 +1,27 @@
+package Basic;
+
+import java.util.Arrays;
+
+public class MoveAllXZeroEnd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] a= {1,2,0,4,0,3,0};
+		int[] ans=method(a);
+		System.out.println(Arrays.toString(ans));
+	}
+
+	public static int[] method(int[] a) {
+		int n[]=new int[a.length];
+		int count=0;
+		for(int i=0;i<a.length;i++) {
+			if(a[i]!=0) {
+				n[count++]=a[i];
+			}
+		}
+		
+		
+		return n;
+	}
+}
