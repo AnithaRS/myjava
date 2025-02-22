@@ -1,0 +1,26 @@
+package Basic;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+public class DuplicateValueOnly {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a[]= {1,2,3,4,3,1,4,5,6};
+		List<Integer> ans=method(a);
+		System.out.println(ans);
+	}
+     public static List<Integer> method(int a[])
+     {    
+     HashSet<Integer> seen=new HashSet<>();
+     HashSet<Integer>    dup=new HashSet<>();
+     for(int i=0;i<a.length;i++) {
+    	 if(!seen.add(a[i])) {
+    		 dup.add(a[i]);
+    	 }
+     }return new ArrayList<>(dup);
+}
+}
