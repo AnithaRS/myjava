@@ -1,0 +1,23 @@
+package Partten;
+
+import java.util.Scanner;
+
+public class Partten1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+     int n=4;
+      method(n);
+ 		
+	}
+
+	public static void method(int n) {
+		
+		for(int i=0;i<n;i++){
+			for(int j=0;j<n;j++) {
+				System.out.print("* ");
+			}System.out.println();
+		}
+	}
+}
