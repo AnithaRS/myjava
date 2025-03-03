@@ -1,0 +1,29 @@
+package baic;
+
+import java.util.Scanner;
+
+public class GCD {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("n1:");
+		int n1=sc.nextInt();
+		System.out.print("n2:");
+		int n2=sc.nextInt();
+		int ans,val=0;
+		if(n1<n2) {
+			ans=n1;
+		}else {
+			ans=n2;
+		}
+		for(int i=1;i<=ans;i++) {
+			if(n1%i==0 && n2%i==0) {
+				 val=i;
+			}
+		}
+		System.out.println(val);
+	}
+
+}
