@@ -1,0 +1,26 @@
+package baic;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class UniqueChar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str="java is a programming launage";
+	method(str);
+		//System.out.println(ans);
+	}
+	public static void method(String str) {
+		str=str.replace(" ","");
+		Set<Character> un=new HashSet<>();
+		for(char c:str.toCharArray()) {
+			if(un.add(c)) {
+				System.out.println(c);
+			}
+		}
+		
+	}
+
+}
