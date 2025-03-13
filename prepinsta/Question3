@@ -1,0 +1,28 @@
+package prepinsta;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Question3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the size:");
+		int size=sc.nextInt();
+		int a[]=new int[size];
+		for(int i=0;i<a.length;i++) {
+			a[i]=sc.nextInt();
+		}
+		int ans[]=method(a);
+		System.out.println(Arrays.toString(ans));
+	}
+	public static int[] method(int a[]) {
+		int n_a[]=new int[a.length];
+		for(int i=0;i<a.length;i++) {
+			n_a[i]=a[a.length-i-1];
+		}return n_a;
+	}
+
+}
