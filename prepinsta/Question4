@@ -1,0 +1,33 @@
+package prepinsta;
+
+import java.util.Scanner;
+
+public class Question4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the num:");
+		int num=sc.nextInt();
+		if(method(num)) {
+			System.out.print("Yes");
+		}else {
+			System.out.println("no");
+		}
+		
+	}
+	public static boolean method(int num) {
+		int j=0,nums=num;
+		while(nums>0) {
+			int mod=nums%10;
+			j=mod+(j*10);
+	        nums=nums/10;
+		}
+
+		if(j!=num) {
+			return false; 
+		}return true;
+	}
+
+}
