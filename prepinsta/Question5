@@ -1,0 +1,32 @@
+package prepinsta;
+
+import java.util.Scanner;
+
+public class Question5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		int start=sc.nextInt();
+		int limit=sc.nextInt();
+		method(start,limit);
+	}
+	public static void method(int start,int limit) {
+		for(int i=start;i<=limit;i++) {
+			int j=0;
+			int val=i;
+			while(val>0) {
+				int mod=val%10;
+				j=mod+(j*10);
+				val=val/10;
+			}
+			if(j==i) {
+System.out.println(j);	
+}
+			
+		}
+		
+	}
+
+}
