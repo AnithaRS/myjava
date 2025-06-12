@@ -1,0 +1,23 @@
+package IfElse2;
+
+import java.util.Scanner;
+
+public class Div2And5and10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		method(n);
+		
+	}
+
+	public  static void method(int n) {
+		if(n%10==0) {
+			System.out.println("yes");
+		}else {
+			System.out.println("No");
+		}
+	}
+}
