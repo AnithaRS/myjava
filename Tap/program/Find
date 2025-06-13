@@ -1,0 +1,26 @@
+package ifelse3;
+
+import java.util.Scanner;
+
+public class Find {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+	method(n);	
+	}
+
+	public static void method(int n) {
+		if(n>='A' && n<='Z') {
+			System.out.println("upper");
+		}else if(n>='0' && n<='9') {
+			System.out.println("number");
+		}else if(n>='a' && n<='z') {
+			System.out.println("lower");
+		}else {
+			System.out.println("none");
+		}
+	}
+}
