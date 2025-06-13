@@ -1,0 +1,21 @@
+package primCheck8;
+
+import java.util.Scanner;
+
+public class NtillMultiples {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+	int x=sc.nextInt();
+	int n=sc.nextInt();
+	method(x,n);
+	}
+	public static void method(int x,int n) {
+		for(int i=n;i<=x;i=i+n) {	
+			System.out.print(i+" ");
+			
+		}
+	}
+
+}
