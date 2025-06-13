@@ -1,0 +1,24 @@
+package forloop6;
+
+import java.util.Scanner;
+
+public class MulOf2And3 {
+//i/p=20
+//o/p=2,3,4,6,8,9,10,12,14,15,16,18,20
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int a=sc.nextInt();
+int b=sc.nextInt();
+method(n,a,b);
+	}
+	public static void method(int n,int a,int b) {
+		for(int i=1;i<=n;i++) {
+			if(i%a==0 || i%b==0) {
+				System.out.print(i+" ");
+			}
+		}
+	}
+
+}
