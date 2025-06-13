@@ -1,0 +1,23 @@
+package ifelse4;
+
+import java.util.Scanner;
+
+public class PrintLargestNum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Scanner sc=new Scanner(System.in);
+     int a=sc.nextInt();
+     int b=sc.nextInt();
+     int c=sc.nextInt();
+     int d=sc.nextInt();
+     method(a,b,c,d);
+	}
+	public static void method(int a,int b,int c,int d) {
+		 int max1=(a>b)?a:b;
+		 int max2=(c>d)?c:d;
+		 int ans=(max1>max2)?max1:max2;
+		 System.out.println(ans);
+	}
+
+}
