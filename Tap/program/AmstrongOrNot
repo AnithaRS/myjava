@@ -1,0 +1,38 @@
+package whileLoop10;
+
+import java.util.Scanner;
+
+public class AmstrongOrNot {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner sc=new Scanner(System.in);
+		 int a=sc.nextInt();
+		 method(a);
+	}
+	public static void method(int n) {
+		int ams=0;
+		int temp=n;
+		int count=count(n);
+		while(n>0) {
+			int last=n%10;
+			ams=ams+(int)Math.pow(last, count);
+			n=n/10;
+		}
+		if(ams==temp) {
+			System.out.println("amstrong");
+		}else {
+			System.out.println("not");
+		}
+	}
+    public static int count(int n) {
+    	int count=0;
+    	while(n>0) {
+    		n=n/10;
+    		count++;
+    	}
+    	
+    	return count;
+    	
+    }
+}
