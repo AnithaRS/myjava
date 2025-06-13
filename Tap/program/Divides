@@ -1,0 +1,28 @@
+package forLoop5;
+
+import java.util.Scanner;
+
+public class Divides {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		method(n);
+	}
+	public static void method(int n) {
+		if(n%15==0) {//div both 5 nd 3
+			System.out.println("btm");
+		}else if(n%5==0) {
+			System.out.println("Aaacadamy");
+		}else if(n%3==0) {
+			System.out.println("tap");
+		} else {
+			System.out.println("invaalid");
+		}
+		
+		
+	}
+
+}
