@@ -1,0 +1,44 @@
+package arrayPair14;
+
+import java.util.Scanner;
+
+public class MinimumProductPair {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int size=sc.nextInt();
+		int a[]=new int[size];
+		for(int i=0;i<a.length;i++) {
+			a[i]=sc.nextInt();
+		}
+		method(a);
+	}
+	public static void method(int a[]) {
+		int ans=fSmall(a)*sSmall(a);
+	System.out.println(ans);
+	}
+	public static int  fSmall(int a[]) {
+		int min=Integer.MAX_VALUE;
+		for(int i=0;i<a.length;i++) {
+			if(a[i]<min) {
+				min=a[i];
+			}
+		}
+		System.out.println("fsml:"+min);
+		return min;
+	}
+	public static int sSmall(int a[]) {
+		int p=Integer.MAX_VALUE,vp=Integer.MAX_VALUE;
+		for(int i=0;i<a.length;i++) {
+			if(a[i]<p) {
+				vp=p;
+				p=a[i];
+			}else if(a[i]<vp) {
+				vp=a[i];
+			}
+		}
+		System.out.println("sec:"+vp);
+		return vp;
+	}
+}
