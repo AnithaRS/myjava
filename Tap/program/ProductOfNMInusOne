@@ -1,0 +1,32 @@
+package arrayTraversal13;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ProductOfNMInusOne {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+int size=sc.nextInt();
+int a[]=new int[size];
+for(int i=0;i<a.length;i++) {
+a[i]=sc.nextInt();
+}
+method(a);
+	}
+	public static void method(int a[]) {
+		int prod=prod(a);
+		int res[]=new int[a.length];
+		for(int i=0;i<a.length;i++) {
+			res[i]=prod/a[i];
+		}System.out.println(Arrays.toString(res));
+	}
+
+	public static int prod(int a[]) {
+		int pd=1;
+		for(int i=0;i<a.length;i++) {
+			pd=pd*a[i];
+		}return pd;
+	}
+}
