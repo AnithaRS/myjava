@@ -1,0 +1,78 @@
+package arrayTraversal15;
+
+import java.util.Scanner;
+
+public class MinProduct {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int size=sc.nextInt();
+		int a[]=new int[size];
+		for(int i=0;i<a.length;i++) {
+			a[i]=sc.nextInt();
+		}
+		method(a);
+			}
+			public static void method(int a[]) {
+				int largest=largest(a);
+				int secondLargest=secondLargest(a);
+				int smallest=smallest(a);
+				int secondSmallest=secondSmallest(a);
+				int p1=largest*secondLargest;
+				int p2=smallest*secondSmallest;
+				int p3=largest*smallest;
+				if(p1<p2 && p1<p3) {
+					System.out.println(p1);
+				}else if(p2<p1 && p2<p3) {
+					System.out.println(p2);
+				}else {
+					System.out.println(p3);
+				}
+			
+			}
+			public static int largest(int a[]) {
+				int max=Integer.MIN_VALUE;
+				for(int i=0;i<a.length;i++) {
+					if(a[i]>max) {
+						max=a[i];	
+					}
+				}return max;
+			}
+			public static int secondLargest(int a[]) {
+				int p=Integer.MIN_VALUE;
+				int vp=Integer.MIN_VALUE;
+				for(int i=0;i<a.length;i++) {
+					if(a[i]>p) {
+						vp=p;
+						p=a[i];
+					}else if(a[i]>vp) {
+						vp=a[i];
+					}
+				}return vp;
+			}
+			
+			public static int smallest(int a[]) {
+				int min=Integer.MAX_VALUE;
+				for(int i=0;i<a.length;i++) {
+					if(a[i]<min) {
+						min=a[i];
+					}
+				}return min;
+			}
+
+			public static int secondSmallest(int a[]) {
+				int p=Integer.MAX_VALUE;
+				int vp=Integer.MAX_VALUE;
+				for(int i=0;i<a.length;i++) {
+					if(a[i]<p) {
+						vp=p;
+						p=a[i];
+					}else if(a[i]<vp && a[i]!=p) {
+						vp=a[i];
+					}
+				}return vp;
+			
+	}
+
+}
