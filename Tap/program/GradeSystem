@@ -1,0 +1,30 @@
+ package ifelse3;
+
+import java.util.Scanner;
+
+public class GradeSystem {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		method(n);
+	}
+	public static void method(int n) {
+	if(n<0 || n>100) {	
+		System.out.println("invalid");
+	}else if(n>90) {
+		System.out.println("A+");
+	}else if(n>80) {
+		System.out.println("A");
+	}else if(n>70) {
+		System.out.println("B+");
+	}else if(n>60) {
+		System.out.println("B");
+	}else if(n>50) {
+		System.out.println("c+");
+	}else if(n>35) {
+		System.out.println("C");
+	}else {
+		System.out.println("fail");
+	}
+	}
+}
