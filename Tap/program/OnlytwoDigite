@@ -1,0 +1,22 @@
+package ifelse3;
+
+import java.util.Scanner;
+
+public class OnlytwoDigite {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		method(n);
+	}
+	public static void method(int n) {
+		if(n>=10 && n<=99) {
+			System.out.println("yes");
+		}else {
+			System.out.println("no");
+		}
+	}
+
+}
