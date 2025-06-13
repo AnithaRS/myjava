@@ -1,0 +1,25 @@
+package SortedAarray16;
+
+import java.util.Scanner;
+
+public class WithoutReapitingElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+int s=sc.nextInt();
+int a[]=new int[s];
+for(int i=0;i<a.length;i++) {
+	a[i]=sc.nextInt();
+}//2 2 2 3 4 4 4 23
+method(a);
+	}
+	public static void method(int a[]) {
+		for(int i=0;i<a.length-1 ;i++) {
+			if(a[i]!=a[i+1]) {
+				System.out.println(a[i]);
+			}
+		}System.out.println(a[a.length-1]);
+	}
+
+}
