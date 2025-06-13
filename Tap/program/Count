@@ -1,0 +1,22 @@
+package whileLoop10;
+
+import java.util.Scanner;
+
+public class Count {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+System.out.println(method(a));
+	}
+	public static int method(int a) {
+		int count=0;
+		while(a>0) {
+			a=a/10;
+			count++;
+		}return count;
+		
+	}
+
+}
