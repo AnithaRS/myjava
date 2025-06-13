@@ -1,0 +1,28 @@
+package whileLoop10;
+
+import java.util.Scanner;
+
+public class PalaindromOrNot {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+method(n);
+	}
+	public static void method(int a) { 
+		int rev=0;
+		int n=a;
+		while(n>0) {
+			int rem=n%10;
+			rev=rem+(rev*10);
+			n=n/10;
+		}
+		if(rev==a) {
+			System.out.println("paalindrom");
+		}else {
+			System.out.println("not");
+		}
+	}
+
+}
